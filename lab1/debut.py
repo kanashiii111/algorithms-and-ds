@@ -11,11 +11,17 @@ as_black: bool = False
 ep_cell = ""
 castle = []
 
-playing_white = {
-    ("c7c5",): "g1f3",
-    
+queens_gambit = {
+    1: "d2d4",
+    2: "c2c4",                    
+    3: "g1f3",                   
+    4: "b1c3",
+    5: "c1f4",
+    6: "e2e3",
+    7: "f1d3",
+    8: "e1g1",
 }
-
+    
 def read_board():
     global as_black, as_white, ep_cell, castle
 
@@ -43,7 +49,6 @@ def read_board():
 
     return board, ping
 
-
 # ========================
 # Main
 # ========================
@@ -52,8 +57,7 @@ def main():
     board, ping = read_board()
     move_number = ping + 1
 
-    move 
-
+    move = queens_gambit[move_number] 
 
     print(f"{move} {move_number}")
 
